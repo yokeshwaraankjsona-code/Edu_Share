@@ -103,7 +103,7 @@ async function loginUser() {
     if(res.ok){
       alert("Welcome back, " + data.name + "!");
       // Here you would redirect to a dashboard
-      // window.location.href = "dashboard.html";
+      window.location.href = "dashboard.html";
     } else {
       alert("Login Failed: " + data.error);
     }
