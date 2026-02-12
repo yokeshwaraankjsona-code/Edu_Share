@@ -22,9 +22,9 @@ otp_store = {}
 # In-memory database for Users
 users_store = {}
 
-GMAIL = "yokeshwaraank@gmail.com"
+GMAIL = "edushare.2026@gmail.com"
 # GENERATE A NEW APP PASSWORD AND PASTE IT BELOW
-APP_PASSWORD = "reuk fcyg kfri ojmu"
+APP_PASSWORD = "qsqg ytvp zluy fpke"
 
 
 def send_otp_email(to_email, otp):
