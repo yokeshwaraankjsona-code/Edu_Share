@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduShare Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Layout */
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    background:#4f46e5;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin-bottom:8px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.sidebar a:hover,
+.sidebar .active{
+    background:rgba(255,255,255,0.2);
+}
+
+/* Main Content */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+header h1{
+    margin-bottom:6px;
+}
+
+header p{
+    color:#6b7280;
+}
+
+/* Stats */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin:25px 0;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.card h3{
+    font-size:14px;
+    color:#6b7280;
+}
+
+.card h2{
+    margin:10px 0;
+}
+
+.green{
+    color:#16a34a;
+    font-size:13px;
+}
+
+/* Content Section */
+.content{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.resources,
+.contributors{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.resource-card{
+    border:1px solid #e5e7eb;
+    padding:15px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.resource-card p{
+    font-size:14px;
+    color:#6b7280;
+    margin:8px 0;
+}
+
+button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4338ca;
+}
+
+/* Contributors */
+.contributors ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.contributors li{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .content{
+        grid-template-columns:1fr;
+    }
+    .sidebar{
+        display:none;
+    }
+}
+
+@media(max-width:480px){
+    .stats{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">EduShare</div>
+        <a class="active">Dashboard</a>
+        <a>Browse Resources</a>
+        <a>Upload</a>
+        <a>Leaderboard</a>
+        <a href="/static/profile.html">Profile</a>
+    </div>
+   
+
+    <!-- Main -->
+    <div class="main">
+        <header>
+            <h1>Welcome back, Student!</h1>
+            <p>Here's an overview of your activity and recent resources</p>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="card">
+                <h3>Total Resources</h3>
+                <h2>1,234</h2>
+                <span class="green">+12% from last month</span>
+            </div>
+            <div class="card">
+                <h3>Downloads</h3>
+                <h2>5,678</h2>
+                <span class="green">+8% from last month</span>
+            </div>
+            <div class="card">
+                <h3>Your Uploads</h3>
+                <h2>12</h2>
+            </div>
+            <div class="card">
+                <h3>Avg. Rating</h3>
+                <h2>4.7</h2>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Recent Resources -->
+            <div class="resources">
+                <h3>Recent Resources</h3>
+
+                <div class="resource-card">
+                    <h4>Data Structures & Algorithms Complete Notes</h4>
+                    <p>Sem 3 • CSE • ⭐ 4.8 • 342 downloads</p>
+                    <button>Download</button>
+                </div>
+
+                <div class="resource-card">
+                    <h4>CIE-1 Question Paper with Solutions</h4>
+                    <p>Sem 4 • CSE • ⭐ 4.5 • 215 downloads</p>
+                    <button>Download</button>
+                </div>
+            </div>
+
+            <!-- Top Contributors -->
+            <div class="contributors">
+                <h3>🏆 Top Contributors</h3>
+                <ul>
+                    <li>Priya Sharma <span>1250</span></li>
+                    <li>Rahul Verma <span>980</span></li>
+                    <li>Ankit Kumar <span>890</span></li>
+                    <li>Neha Patel <span>720</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
