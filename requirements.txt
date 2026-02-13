@@ -16,3 +16,6 @@ pyinstaller-hooks-contrib==2026.0
 pywin32-ctypes==0.2.3
 setuptools==80.10.2
 Werkzeug==3.1.5
+Flask
+Flask-SQLAlchemy
+PyMySQL
